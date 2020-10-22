@@ -80,8 +80,8 @@ namespace GraphicalShell.Resourses
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
-                    StandardErrorEncoding = Encoding.ASCII,
-                    StandardOutputEncoding = Encoding.ASCII,
+                    StandardErrorEncoding = Encoding.UTF8,
+                    StandardOutputEncoding = Encoding.UTF8,
                     CreateNoWindow = true
                 }
 
