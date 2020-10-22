@@ -80,9 +80,10 @@ namespace GraphicalShell.Resourses
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
-                    StandardErrorEncoding = Encoding.UTF8,
-                    StandardOutputEncoding = Encoding.UTF8,
+                    StandardErrorEncoding = Encoding.GetEncoding(866),
+                    StandardOutputEncoding = Encoding.GetEncoding(866),
                     CreateNoWindow = true
+                    
                 }
 
 
@@ -139,7 +140,7 @@ namespace GraphicalShell.Resourses
             {
                 var process = new Process();
                 var startinfo = new ProcessStartInfo(path);
-                startinfo.StandardOutputEncoding = Encoding.UTF8;
+                startinfo.StandardOutputEncoding = Encoding.GetEncoding(866);
                 startinfo.RedirectStandardOutput = true;
                 startinfo.UseShellExecute = false;
                 startinfo.CreateNoWindow = true;
@@ -222,7 +223,7 @@ namespace GraphicalShell.Resourses
             {
                 var processinfo = new ProcessStartInfo(cmdpath, args);
                 processinfo.CreateNoWindow = true;
-                processinfo.StandardOutputEncoding = Encoding.ASCII;
+                processinfo.StandardOutputEncoding = Encoding.GetEncoding(866);
                 processinfo.UseShellExecute = false;
                 processinfo.RedirectStandardOutput = true;
                 processinfo.RedirectStandardError = true;
